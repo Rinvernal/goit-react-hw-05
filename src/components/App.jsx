@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router-dom"
 import Header from "./Header/Header"
-import MovieCast from "./MovieCast/MovieCast"
-import MovieReviews from "./MovieReviews/MovieReviews"
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
 import { lazy, Suspense } from "react"
-
-const App = () => {
   const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
   const MoviesPage = lazy(() => import('../pages/MoviesPage/MoviesPage'));
   const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage/MovieDetailsPage'));
+  const MovieCast = lazy(() => import('../components/MovieCast/MovieCast'));
+  const MovieReviews = lazy(() => import('../components/MovieReviews/MovieReviews'));
+const App = () => {
   return (
     <div>
       <Header/>
